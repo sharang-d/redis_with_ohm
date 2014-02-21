@@ -1,0 +1,13 @@
+<%= form_tag "/users/#{@user.id}", :method => :patch do %>
+    
+      <%= label_tag "name",'Name' %>
+      <%= text_field_tag "user[name]", '', :placeholder => "Enter your name" %>
+ 
+      <%= label_tag "email", 'Email' %>
+      <%= text_field_tag "user[email]", '', :placeholder => "Valid email address" %>
+
+      <%= label_tag "age", 'Age' %>
+      <%= text_field_tag "user[age]", '', :placeholder => "Enter your age" %>
+
+    <%= submit_tag "Save" %>
+<% end %>
